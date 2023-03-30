@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import snowflake.connector
 from snowflake.connector.pandas_tools import pd_writer
+from snowflake.connector.pandas_tools import write_pandas
 
 @st.cache_resource
 def init_connection():
@@ -16,3 +17,4 @@ df = pd.DataFrame({'Text': [text_input]})
 st.write(df)
 
 df.to_sql('PETS.PUBLIC.TABLE', engine, index=False, method=pd_writer)
+success, nchunks, nrows, _ = write_pandas(conn, df, 'PETS.PUBLIC.TABLE')
