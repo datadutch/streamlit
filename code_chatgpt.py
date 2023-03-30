@@ -16,4 +16,4 @@ text_input = st.text_input('Enter your text here')
 df = pd.DataFrame({'Text': [text_input]})
 st.write(df)
 
-success, nchunks, nrows, _ = write_pandas(conn, df, 'PETS.PUBLIC.TABLE')
+success, nchunks, nrows, _ = write_pandas(conn, df, 'PETS.PUBLIC.MYTABLE2')
