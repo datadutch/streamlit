@@ -16,5 +16,4 @@ text_input = st.text_input('Enter your text here')
 df = pd.DataFrame({'Text': [text_input]})
 st.write(df)
 
-df.to_sql('PETS.PUBLIC.TABLE', engine, index=False, method=pd_writer)
 success, nchunks, nrows, _ = write_pandas(conn, df, 'PETS.PUBLIC.TABLE')
