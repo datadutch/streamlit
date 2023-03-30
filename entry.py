@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Store the initial value of widgets in session state
 if "visibility" not in st.session_state:
