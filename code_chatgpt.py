@@ -13,7 +13,7 @@ def init_connection():
 conn = init_connection()
 
 text_input = st.text_input('Enter your text here')
-df = pd.DataFrame({'Text': [text_input]})
+df = pd.DataFrame({'str': [text_input]})
 st.write(df)
 
 success, nchunks, nrows, _ = write_pandas(conn, df, 'MYTABLE2')
