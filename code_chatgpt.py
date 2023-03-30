@@ -14,4 +14,4 @@ text_input = st.text_input('Enter your text here')
 df = pd.DataFrame({'Text': [text_input]})
 st.write(df)
 
-snowflake.connector.pandas_tools.write_pandas(conn, df, '<table>')
+snowflake.connector.pandas_tools.to_sql(conn, df, 'PETS.PUBLIC.TABLE')
