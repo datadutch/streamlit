@@ -12,8 +12,8 @@ def init_connection():
 
 conn = init_connection()
 
-text_input = st.text_input('Enter your text here')
-df = pd.DataFrame({'Text': [text_input]})
+text_input = st.text_input('Enter your decimal here')
+df = pd.DataFrame({'Decimal': [text_input]})
 df = df.to_string()
 st.write(df)
 
