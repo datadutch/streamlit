@@ -1,2 +1,5 @@
 # secrets
-secrets.toml
+*.toml
+*.json
+
+.DS_Store
