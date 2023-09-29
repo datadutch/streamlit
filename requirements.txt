@@ -1,8 +1,27 @@
 # pip install -r requirements.txt
--r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.7.9/tested_requirements/requirements_39.reqs
+# -r https://raw.githubusercontent.com/snowflakedb/snowflake-connector-python/v2.7.9/tested_requirements/requirements_39.reqs
+# pasted the contents of the file above here, to resolve conflicts
+asn1crypto==1.5.1
+certifi==2022.6.15
+cffi==1.15.0
+charset-normalizer==2.0.12
+cryptography==36.0.2
+idna==3.3
+oscrypto==1.3.0
+pycparser==2.21
+pycryptodomex==3.15.0
+PyJWT==2.4.0
+pyOpenSSL==22.0.0
+pytz==2022.1
+requests==2.28.0
+urllib3==1.26.9
+# snowflake-connector-python==2.7.12
+# end of paste  
 s3fs==2023.3.0
-charset-normalizer~=2.0.0
-pyarrow<6.1.0,>=6.0.0; extra == "pandas"
+# charset-normalizer~=2.0.0
+pyarrow==10.0.1; extra == "pandas"
 streamlit
 altair<5
 sqlalchemy
+notebook
+snowflake-snowpark-python

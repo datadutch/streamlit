@@ -9,7 +9,7 @@ st.title('❄️ How to connect Streamlit to a Snowflake database')
 
 # connect to Snowflake
 def create_session():
-    with open('../config/sf-config.json') as f: # check the creds-fake.json file for format
+    with open('config.json') as f: # check the creds-fake.json file for format
         connection_parameters = json.load(f)  
     session = Session.builder.configs(connection_parameters).create()
     return session
@@ -32,7 +32,7 @@ def load_data(table_name):
     return table
 
 # Select and display data table
-table_name = "DB_STREAMLIT.PUBLIC.EMPLOYEE"
+table_name = "DEMO_DB.PUBLIC.EMP_BASIC"
 
 ## Display data table
 df = load_data(table_name)
