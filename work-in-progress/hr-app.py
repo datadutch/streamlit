@@ -7,7 +7,7 @@ from snowflake.snowpark.functions import call_udf, col
 
 # connect to Snowflake
 def create_session():
-    with open('../config/sf-config.json') as f: # check the creds-fake.json file for format
+    with open('..\config.json') as f: # check the creds-fake.json file for format
         connection_parameters = json.load(f)  
     session = Session.builder.configs(connection_parameters).create()
     return session
@@ -16,7 +16,7 @@ session = create_session()
 st.success("Connected to Snowflake!")
 
 # get Snowflake table data
-employeeDf = session.table("employee")
+employeeDf = session.table("EMP_BASIC")
 
 # main entry form
 with st.form("my_form"):

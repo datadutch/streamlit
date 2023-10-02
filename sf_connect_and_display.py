@@ -6,7 +6,7 @@ st.title('❄️ How to connect Streamlit to a Snowflake database')
 
 # connect to Snowflake
 def create_session():
-    with open('../config/sf-config.json') as f:
+    with open('..\config.json') as f:
         connection_parameters = json.load(f)  
     session = Session.builder.configs(connection_parameters).create()
     return session
@@ -28,7 +28,7 @@ def load_data(table_name):
     return table
 
 # Select and display data table
-table_name = "DB_STREAMLIT.PUBLIC.EMPLOYEE"
+table_name = "DEMO_DB.PUBLIC.EMPLOYEE"
 
 ## Display data table
 df = load_data(table_name)

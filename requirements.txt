@@ -25,3 +25,8 @@ altair<5
 sqlalchemy
 notebook
 snowflake-snowpark-python
+pandas_profiling
+streamlit_pandas_profiling
+streamlit_elements
+streamlit_shap
+xgboost
