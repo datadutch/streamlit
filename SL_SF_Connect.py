@@ -9,7 +9,7 @@ st.title('❄️ How to connect Streamlit to a Snowflake database')
 
 # connect to Snowflake
 def create_session():
-    with open('config.json') as f: # check the creds-fake.json file for format
+    with open('..\..\config_enx.json') as f: # check the creds-fake.json file for format
         connection_parameters = json.load(f)  
     session = Session.builder.configs(connection_parameters).create()
     return session

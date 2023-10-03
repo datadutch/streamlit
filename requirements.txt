@@ -28,5 +28,6 @@ snowflake-snowpark-python
 pandas_profiling
 streamlit_pandas_profiling
 streamlit_elements
-streamlit_shap
+streamlit-shap
 xgboost
+matplotlib==3.2.2
