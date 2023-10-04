@@ -17,4 +17,4 @@ df = pd.DataFrame({'Decimal': [text_input]})
 df = df.rename(columns={"Decimal": "SLEUTEL"})
 st.write(df)
 
-success, nchunks, nrows, _ = write_pandas(conn, df, 'MYTABLE')
+write_pandas(conn, df, 'MYTABLE')
